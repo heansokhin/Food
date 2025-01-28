@@ -11,7 +11,7 @@ body {
 }
 
 body {
-  background: #3a5e44;
+  background: #fdebdd;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #000;
@@ -19,6 +19,13 @@ body {
   padding: 0;
 }
 .swiper {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -26,14 +33,14 @@ body {
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 100%;
 }
 .swiper-slide img {
   display: block;
-  width: 65%;
-  margin-top: 50px;
-  margin-bottom: 30px;
+  width: 50%;
+  margin-top: 70px;
+  border-radius: 97px;
 }
 p{
   font-weight: 300;
@@ -62,18 +69,16 @@ p{
   color: #f5f4ef;
 }
 .Btn{
-  font-size: 1em;
+  font-size: 1.7em;
   color: #fff;
-  background: #ff0101;
+ background:linear-gradient(90DEG,#ef8425,#e60523);
   display: inline-block;
   padding: 10px 30px;
-  margin-top: 2px;
   margin-bottom: 15px;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 2px;
   transition: 0.9s;
-  border-radius: 97px;
 }
 .Btn:hover{
   letter-spacing: 30px;
@@ -101,15 +106,6 @@ header .Logo{
   font-size: 4em;
   text-decoration: none;
 }
-header .Back{
-  color: #fff;
-  font-weight: 700;
-  font-size: 2em;
-  text-decoration: none
-}
-header.sticky .Back{
-  color: #c8ff00;
-}
 header.sticky .Logo{
   color: #e10000;
 }
@@ -135,12 +131,48 @@ header.sticky .Navigation li a{
 }
 header.sticky .Navigation li a:hover{
   color: #ff0157;
+  box-shadow: 0 0 20px orange;
+}
+.Home p{
+  color: #000;
+  font-size: 1.3em;
+}
+.Home h2{
+  color: #000;
+}
+.Foodimg{
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  width: 90%;
+  padding: 25px;
+  animation: slideInfrombottom 1s ease-in-out 1.5s backwards;
+}
+.Foodimg img{
+  width: 130px;
+  height: 110px;
+  margin-left: 15px;
+  object-fit: cover;
+  border: 2px solid white;
+  transform: transform 0.3s ease;
+  animation: fadeinup 1s ease-in-out 2s backwards;
+}
+.Foodimg img:hover{
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
 }
 section{
   padding: 100px; 
 }
 .about img{
   margin-top: 100px;
+}
+.col50 img:hover{
+  transform: scale(1.1);
+  transition: 0.9s;
+  box-shadow: 0 0 30px rgba(9, 54, 118, 0.8);
 }
 .about{
   position: relative;
@@ -150,7 +182,7 @@ section{
   margin-top: 60px;
 }
 .about p{
-  color: rgb(255, 255, 255);
+  color: rgb(17, 11, 11);
   margin-top: 40px;
   font-size: 1.5em;
   font-family: Arial, Helvetica, sans-serif;
@@ -160,7 +192,7 @@ section{
   width: 90%;
 }
 .text{
-  color: #f0e8e8;
+  color: #120e0e;
   font-size: 2em;
   font-weight: 300;
 }
@@ -196,20 +228,20 @@ section{
 .Menu p{
  text-align: center;
  font-size: 1.5em;
- color: rgb(255, 255, 255);
- margin-top: 7px;
+ color: rgb(20, 12, 12);
+ margin-top: 3%px;
 }
 .Menu .contton{
   display: flex;
   justify-content: center;
   flex-direction: row-reverse;
   flex-wrap: wrap;
-  margin-top: 40px;
+  margin-top: 20px;
   color: #ff0157;
 }
 .Menu .contton .boxx{
   width: 340Px;
-  margin: 20px;
+  margin: 10px;
   border: 7px solid #fff;
   box-shadow: 0 5px 35px rgba(0, 0, 0, 0.8);
 }
@@ -225,7 +257,6 @@ section{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  margin-top: 2px;
 }
 .Menu .contton .boxx .texxt{
   padding: 5px 0 1px;
@@ -233,21 +264,24 @@ section{
 .Menu .contton .boxx .texxt h3{
   font-size: 1.7em;
   font-weight: bolder;
-  color: rgb(255, 255, 255);
+  color: rgb(16, 15, 15);
   margin-top: 10px;
 }
 .Menu .contton .boxx .texxt span{
   font-size:1.3em;
-  color: rgb(235, 252, 0);
+  color: rgb(255, 0, 0);
+}
+.Menu .contton .boxx .texxt .food{
+  color: black;
 }
 .Menu .star{
   margin-bottom: 3px;
 }
 .shopping{
   font-size: 20px;
-  color: rgb(255, 255, 255);
+  color: rgb(69, 102, 191);
   margin-left: 270px;
-  margin-bottom: 10px;
+  margin-bottom: 2px;
 }
 .shopping:hover{
   transform: scale(1.1);
@@ -257,16 +291,19 @@ section{
 .contton img:hover {
   transform: scale(1.1);
   transition: 0.5s;
+  box-shadow: 0 0 30px rgba(2, 12, 129, 0.8);
 }
 .Expert img:hover{
   transform: scale(1.1);
   transition: 0.5s;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.8);
 }
 .Expert p{
   text-align: center;
-  color: #e7e3e3;
+  color: #080b08;
   font-family: 'Times New Roman', Times, serif;
   font-size: 1.5em;
+  margin-top: 30px;
 }
 .Expert .conttainn{
   display: flex;
@@ -286,7 +323,7 @@ section{
 }
 .Expert .conttainn .boxbr .texxt h3{
   font-size: 1.5em;
-  color: #ffffff;
+  color: #121111;
 }
 .Expert .conttainn .boxbr img{
   height: 350px;
@@ -308,7 +345,7 @@ section{
 }
 .Testimonail p{
   text-align: center;
-  color: #e7e3e3;
+  color: #121010;
   font-family: 'Times New Roman', Times, serif;
   font-size: 1.5em;
 }
@@ -323,13 +360,13 @@ section{
   width: 400px;
   margin: 20px;
   padding: 40px;
-  background-color: #216a4f;
+  background:linear-gradient(90DEG,#ef8425,#334eac);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   box-shadow:  20px 20px 20px rgba(4, 15, 178, 0.1);
-  border: 5px solid #9a7676;
+  border: 2px solid #0026ff;
 }
 .Testimonail .content .box .imgbx{
   position: relative;
@@ -355,11 +392,14 @@ section{
   font-family: 'Times New Roman', Times, serif;
   font-size: 0.7em;
 }
-.Contact{
-  background: url(cover.jpg);
-  margin-bottom: 5px;
-  background-repeat: no-repeat;
-  margin-left: 380px;
+.Testimonail .Feedback{
+  color: #0c0c0c;
+  font-size: 1.5em;
+
+}
+.Testimonail p{
+  color: whitesmoke;
+  font-size: 1.5em;
 }
 .Concatform{
   padding: 75px 50px;
@@ -367,11 +407,11 @@ section{
   box-shadow: 10px 10px 20px rgb(45, 41, 41);
   max-width: 350PX;
   height: 100%;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 .Concatform h3{
-  color: #111;
-  font-size: 1.2EM;
+  color: #e10000;
+  font-size: 1.7em;
   margin-bottom: 20px;
   font-weight: 500;
 }
@@ -382,7 +422,8 @@ section{
 }
 .Concatform .Inputbox input{
   width: 100%;
-  border: 1px solid #555;
+  border: 1px solid #0011ff;
+  box-shadow: 5px 5px 5px;
   padding: 10px;
   color: #111;
   outline: none;
@@ -429,4 +470,13 @@ section{
   display: inline-block;
   width: 100%;
 }
-
+.Contact{
+  position: relative;
+  width: 100%;
+  min-height: 92vh;
+  background: url(BBB.jpg);
+  background-size: cover;
+}
+.Contact .contactCustomer strong{
+  color:whitesmoke ;
+}
